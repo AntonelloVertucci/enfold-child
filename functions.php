@@ -19,7 +19,6 @@ add_filter('admin_footer_text', 'nm_footer_admin_left');
     ENFOLD
     =============================================
 */
-
 /* Debug modus */
 function nm_enfold_debug_modus(){
   return "debug";
