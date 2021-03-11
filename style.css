@@ -70,8 +70,8 @@ CF7 Contact Form 7
     #top form.wpcf7-form .nm_row{width: 100%; display: block; clear: both; overflow: hidden;}
     #top form.wpcf7-form .nm_one_half{width: 49.25%; margin-left: 1.5%; clear: none; float: left;}
     #top form.wpcf7-form .nm_row div:first-child{margin-left: 0}
-    #top form.wpcf7-form .nm_two_third{width: 66.1666667% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
     #top form.wpcf7-form .nm_one_third{width: 32.3333333% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
+    #top form.wpcf7-form .nm_two_thirds{width: 66.1666667% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
 }
 
 /* CF7 Output */
