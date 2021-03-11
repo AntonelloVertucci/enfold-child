@@ -51,6 +51,39 @@ Misc
 
 
 /* =======================================================================================================================================
+CF7 Contact Form 7
+======================================================================================================================================= */
+/* CF7 Style */
+#top form.wpcf7-form input,
+#top form.wpcf7-form select,
+#top form.wpcf7-form textarea{padding: 1em; border-radius: 4px; border: 1px solid #d0d0d0 !important; color: #000 !important; font-size: 1rem; margin-bottom: 15px; background-color: transparent !important}
+#top form.wpcf7-form input.wpcf7-submit{padding: 1em 2em; border-radius: 4px; border: 1px solid #000 !important; color: #fff !important; font-size: 1rem; background-color: #000 !important}
+
+#top form.wpcf7-form .wpcf7-acceptance{display: block; margin-bottom: 1em}
+#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item{margin: 0}
+#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label{display: -webkit-box;display: -ms-flexbox;display: flex;}
+#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > input{margin: .2em .8em 0 0;}
+#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > .wpcf7-list-item-label{line-height: 1.5; color: #000; font-size: small}
+
+/* CF7 Grid */
+@media only screen and (min-width: 567px) {
+    #top form.wpcf7-form .nm_row{width: 100%; display: block; clear: both; overflow: hidden;}
+    #top form.wpcf7-form .nm_one_half{width: 49.25%; margin-left: 1.5%; clear: none; float: left;}
+    #top form.wpcf7-form .nm_row div:first-child{margin-left: 0}
+    #top form.wpcf7-form .nm_two_third{width: 66.1666667% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
+    #top form.wpcf7-form .nm_one_third{width: 32.3333333% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
+}
+
+/* CF7 Output */
+#top form.wpcf7-form .ajax-loader{display: none;}
+#top form.wpcf7-form .wpcf7-not-valid-tip{display: none;}
+#top form.wpcf7-form .wpcf7-response-output{font-size: 1rem; padding: 1em 2em; margin: 0; border: 0; line-height: 1.5; background: #eee; border-left: 2px solid #7d7d7d; color: #7d7d7d;}
+#top form.wpcf7-form .wpcf7-not-valid{border-bottom: 1px solid darkred !important;}
+#top form.wpcf7-form.invalid .wpcf7-response-output{background: #fff0f0; border-color: darkred; color: darkred}
+#top form.wpcf7-form.sent .wpcf7-response-output{background: #daffda; border-color: green; color: green;}
+
+
+/* =======================================================================================================================================
 Footer
 ======================================================================================================================================= */
 
