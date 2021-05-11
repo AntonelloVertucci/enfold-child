@@ -121,21 +121,6 @@ add_shortcode('menu', 'nm_menu_shortcode');
 
 /*
     =============================================
-    Add Post Name/Title in Body Class
-    =============================================
-*/
-function av_class_names( $classes ){
-    if ( !is_404() ){
-        global $post;
-        $classes[] = $post->post_name;
-        return $classes;
-    }else return $classes;
-}
-add_filter('body_class', 'av_class_names');
-
-
-/*
-    =============================================
     Add Category in Body Class if is single
     =============================================
 */
