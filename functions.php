@@ -43,20 +43,6 @@ function nm_custom_enfold_style(){
 }
 add_action('admin_head', 'nm_custom_enfold_style');
 
-/* Shortcode to display Enfold Breadcrumbs */
-function nm_breadcrump_func( $atts ){
-    global $avia_config;
-    return avia_breadcrumbs(array('separator' => '/', 'before' => 'Sie befinden sich hier', 'richsnippet' => true));
-}
-add_shortcode( 'nm_breadcrump', 'nm_breadcrump_func' );
-
-/* Enfold Breadcrumbs args */
-function nm_breadcrump_args($args){
-    $args['before'] = '';
-    return $args;
-}
-add_filter('avia_breadcrumbs_args', 'nm_breadcrump_args', 50, 1);
-
 /* Disable Portfolio 
 function nm_remove_portfolio(){
     remove_action('init', 'portfolio_register');
