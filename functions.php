@@ -76,6 +76,13 @@ return $post_states;
 }
 add_filter('display_post_states','nm_remove_ALB_post_state',999,2);
 
+/* Shortcode to display Breadcrumb [nm_breadcrumb] */
+function nm_breadcrumb_func( $atts ){
+    global $avia_config;
+    return Avia_Breadcrumb_Trail()->get_trail($args);
+}
+add_shortcode( 'nm_breadcrumb', 'nm_breadcrumb_func' );
+
 /* Disable Enfold Image generation 
 function nm_ava_image_sizes(){ 
     remove_image_size('masonry');
