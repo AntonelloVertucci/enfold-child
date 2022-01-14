@@ -7,9 +7,11 @@
     =============================================
 */
 function nm_footer_admin_left(){
-echo '<span style="font-size: 11px; color:black; letter-spacing: 2px;">NECKARMEDIA</span>
-      <span style="font-size: 11px; color:red;">PHP '.PHP_VERSION.'</span> |  
-      <span style="font-size: 11px; color:blue;">WP '.get_bloginfo( "version" ).'</span>';
+    $blog_public = 0 == get_option( 'blog_public' ) ? '<span style="color: red">OFF</span>' : '<span style="color: green">ON</span>';
+    echo '<span style="font-size: 11px; color:black; letter-spacing: 2px;">NECKARMEDIA</span>
+          <span style="font-size: 11px; color:red;">PHP ' . PHP_VERSION . '</span> |  
+          <span style="font-size: 11px; color:blue;">WP ' . get_bloginfo( "version" ) .'</span> | 
+          <span style="font-size: 11px; color:black;">SEO-Index:</span> <b>' . $blog_public . '</b>';
 }
 add_filter('admin_footer_text', 'nm_footer_admin_left');
 
