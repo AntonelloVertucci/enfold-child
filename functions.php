@@ -159,8 +159,7 @@ add_action('init', 'NM_remove_header_info_func');
     =============================================
 
 function script_js() {    
-    $script = get_stylesheet_directory_uri() . '/js/script.js';
-    wp_register_script('script', $script, array('jquery'),'', true);
+    wp_register_script('script', get_stylesheet_directory_uri() . '/js/script.js', array('jquery'),'', true);
     wp_enqueue_script('script');
 }
 add_action('wp_enqueue_scripts', 'script_js');
