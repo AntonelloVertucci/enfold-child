@@ -155,14 +155,14 @@ add_action('init', 'NM_remove_header_info_func');
 
 /*
     =============================================
-    Enqueue Script.js
+    Enqueue script
     =============================================
 
-function script_js() {    
+function NM_enqueue_script_func() {    
     wp_register_script('script', get_stylesheet_directory_uri() . '/js/script.js', array('jquery'),'', true);
     wp_enqueue_script('script');
 }
-add_action('wp_enqueue_scripts', 'script_js');
+add_action('wp_enqueue_scripts', 'NM_enqueue_script_func');
 */
 
 
