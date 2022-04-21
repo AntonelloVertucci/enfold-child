@@ -12,10 +12,10 @@
 /* =======================================================================================================================================
 Typo
 ======================================================================================================================================= */
-html{}
+html{-webkit-tap-highlight-color: transparent;}
 body{-webkit-font-smoothing: antialiased;}
-h1,h2,h3,h4,h5,h6{}
 body,p{}
+h1,h2,h3,h4,h5,h6{}
 
 #top .special_amp{color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;}
 
