@@ -65,15 +65,6 @@ CF7 Contact Form 7
 #top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > input{margin: .2em .8em 0 0;}
 #top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > .wpcf7-list-item-label{line-height: 1.5; color: #000; font-size: small}
 
-/* CF7 Grid */
-@media only screen and (min-width: 567px) {
-    #top form.wpcf7-form .nm_row{width: 100%; display: block; clear: both; overflow: hidden;}
-    #top form.wpcf7-form .nm_one_half{width: 49.25%; margin-left: 1.5%; clear: none; float: left;}
-    #top form.wpcf7-form .nm_row div:first-child{margin-left: 0}
-    #top form.wpcf7-form .nm_one_third{width: 32.3333333% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
-    #top form.wpcf7-form .nm_two_thirds{width: 66.1666667% !important; margin-left: 1.5%; clear: none !important; float: left !important;}
-}
-
 /* CF7 Output */
 #top form.wpcf7-form .ajax-loader{display: none;}
 #top form.wpcf7-form .wpcf7-not-valid-tip{display: none;}
