@@ -35,16 +35,6 @@ if(!function_exists('avia_debugging_info')){
 /* Remove the Import Dummy Data button (Demo) */
 add_theme_support('avia_disable_dummy_import');
 
-/* Backend Style */
-function NM_custom_enfold_style_func(){
-  echo '<style>
-    #pr-logo{display:none}
-    .avia_options_page_sidebar .avia_header{background-size:60px; background-position:center; background-image: url('. get_stylesheet_directory_uri() .'/img/n-logo.png); background-repeat:no-repeat}
-    } 
-  </style>';
-}
-add_action('admin_head', 'NM_custom_enfold_style_func');
-
 /* Disable Portfolio 
 function NM_disable_portfolio_func(){
     remove_action('init', 'portfolio_register');
