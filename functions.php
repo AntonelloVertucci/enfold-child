@@ -1,6 +1,5 @@
 <?php
 
-
 /*
     =============================================
     Backend Footer
@@ -143,7 +142,6 @@ function NM_remove_header_info_func(){
 add_action('init', 'NM_remove_header_info_func');
 
 
-
 /*
     =============================================
     Remove extra global-styles-inline-css and SVG Filters
@@ -167,8 +165,4 @@ function NM_enqueue_script_func() {
 }
 add_action('wp_enqueue_scripts', 'NM_enqueue_script_func');
 */
-
-
-
-
 
