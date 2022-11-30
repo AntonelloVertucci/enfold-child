@@ -2,7 +2,7 @@
  Theme Name:   Enfold Child Theme
  Theme URI:    https://www.neckarmedia.com
  Description:  
- Author:       Antonello Vertucci
+ Author:       Neckarmedia
  Author URI:   https://www.neckarmedia.com
  Template:     
  Version:      1.0
@@ -64,6 +64,15 @@ CF7 Contact Form 7
 #top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label{display: -webkit-box;display: -ms-flexbox;display: flex;}
 #top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > input{margin: .2em .8em 0 0;}
 #top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item > label > .wpcf7-list-item-label{line-height: 1.5; color: #000; font-size: small}
+
+/* CF7 Grid */
+@media only screen and (min-width: 768px){
+    :root{--f-row-gap: 20px;}
+    #top .f_row{display: flex; flex-wrap: wrap; margin-bottom: var(--f-row-gap); gap: var(--f-row-gap)}
+    #top .f_row > div{ flex-basis: 0; flex-grow: 1; max-width: 100%;}
+    #top .f_row > div.one-third{flex: 0 0 calc( 33.333333% - (var(--f-row-gap) / 3 * 2) ); max-width: calc( 33.333333% - (var(--f-row-gap) / 3 * 2) );}
+    #top .f_row > div input, #top .f_row > div select, #top .f_row > div textarea{margin: 0}
+}
 
 /* CF7 Output */
 #top form.wpcf7-form .ajax-loader{display: none;}
