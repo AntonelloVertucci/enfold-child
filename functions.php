@@ -60,6 +60,26 @@ return $post_states;
 }
 add_filter('display_post_states','NM_remove_ALB_post_state_func',999,2);
 
+/* Remove Enfold Image sizes */
+function NM_remove_enfold_image_sizes_func() {
+//  remove_image_size('widget');
+	remove_image_size('square');
+	remove_image_size('featured');
+	remove_image_size('featured_large');
+	remove_image_size('portfolio');
+	remove_image_size('portfolio_small');
+	remove_image_size('gallery');
+	remove_image_size('magazine');
+	remove_image_size('masonry');
+	remove_image_size('entry_without_sidebar');
+	remove_image_size('entry_with_sidebar');
+	remove_image_size('shop_thumbnail');
+	remove_image_size('shop_catalog');
+	remove_image_size('shop_single'); 
+  remove_image_size('shop_gallery_thumbnail');
+}
+add_action('init', 'NM_remove_enfold_image_sizes_func');
+
 
 /*
     =============================================
