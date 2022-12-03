@@ -45,7 +45,7 @@ return $post_states;
 }
 add_filter('display_post_states','AV_remove_ALB_post_state_func', 999, 2);
 
-/* Remove Enfold Image sizes */
+/* Remove Enfold image thumbnail sizes */
 function AV_remove_enfold_image_sizes_func(){
 	//remove_image_size('widget');
 	remove_image_size('square');
