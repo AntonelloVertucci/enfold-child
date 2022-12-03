@@ -51,6 +51,7 @@ function AV_remove_enfold_image_sizes_func(){
 	remove_image_size('square');
 	remove_image_size('featured');
 	remove_image_size('featured_large');
+	remove_image_size('extra_large');
 	remove_image_size('portfolio');
 	remove_image_size('portfolio_small');
 	remove_image_size('gallery');
