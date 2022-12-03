@@ -2,21 +2,6 @@
 
 /*
     =============================================
-    Backend Footer
-    =============================================
-*/
-function AV_footer_admin_left_func(){
-    $blog_public = 0 == get_option( 'blog_public' ) ? '<span style="color: red">OFF</span>' : '<span style="color: green">ON</span>';
-    echo '<span style="font-size: 11px; color:black; letter-spacing: 2px;">NECKARMEDIA</span>
-          <span style="font-size: 11px; color:red;">PHP ' . PHP_VERSION . '</span> |  
-          <span style="font-size: 11px; color:blue;">WP ' . get_bloginfo( "version" ) .'</span> | 
-          <span style="font-size: 11px; color:black;">SEO-Index:</span> <b>' . $blog_public . '</b>';
-}
-add_filter('admin_footer_text', 'AV_footer_admin_left_func');
-
-
-/*
-    =============================================
     ENFOLD
     =============================================
 */
@@ -62,7 +47,7 @@ add_filter('display_post_states','AV_remove_ALB_post_state_func', 999, 2);
 
 /* Remove Enfold Image sizes */
 function AV_remove_enfold_image_sizes_func(){
-    //remove_image_size('widget');
+	//remove_image_size('widget');
 	remove_image_size('square');
 	remove_image_size('featured');
 	remove_image_size('featured_large');
@@ -76,9 +61,24 @@ function AV_remove_enfold_image_sizes_func(){
 	remove_image_size('shop_thumbnail');
 	remove_image_size('shop_catalog');
 	remove_image_size('shop_single'); 
-  remove_image_size('shop_gallery_thumbnail');
+	remove_image_size('shop_gallery_thumbnail');
 }
 add_action('init', 'AV_remove_enfold_image_sizes_func');
+
+
+/*
+    =============================================
+    Backend Footer
+    =============================================
+*/
+function AV_footer_admin_left_func(){
+    $blog_public = 0 == get_option( 'blog_public' ) ? '<span style="color: red">OFF</span>' : '<span style="color: green">ON</span>';
+    echo '<span style="font-size: 11px; color:black; letter-spacing: 2px;">NECKARMEDIA</span>
+          <span style="font-size: 11px; color:red;">PHP ' . PHP_VERSION . '</span> |  
+          <span style="font-size: 11px; color:blue;">WP ' . get_bloginfo( "version" ) .'</span> | 
+          <span style="font-size: 11px; color:black;">SEO-Index:</span> <b>' . $blog_public . '</b>';
+}
+add_filter('admin_footer_text', 'AV_footer_admin_left_func');
 
 
 /*
