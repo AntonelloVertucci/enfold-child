@@ -76,7 +76,7 @@ function AV_footer_admin_left_func(){
     $blog_public = 0 == 
     get_option( 'blog_public' ) 
     ? '<span style="color: red">OFF</span>' 
-    : '<span style="color: #00b400; font-size: 10px; padding: 0.2em 0.4em; background: rgb(0 255 0 / 10%); border-radius: 4px">ON</span>';
+    : '<span style="color: #008600; font-size: 10px; padding: 0.2em 0.4em; background: rgb(0 255 0 / 10%); border-radius: 4px">ON</span>';
     echo '<span style="color: black; font-family: Helvetica, sans-serif; font-weight: 700; margin: 0 .3em 0 0">neckarmedia</span>
           <span style="font-size: 11px; color:red;">PHP ' . PHP_VERSION . '</span> |  
           <span style="font-size: 11px; color:blue;">WP ' . get_bloginfo( "version" ) .'</span> | 
@@ -91,10 +91,7 @@ add_filter('admin_footer_text', 'AV_footer_admin_left_func');
     =============================================
 */
 function AV_hide_update_notification_func(){
-  echo '<style>
-        .update-nag,
-        .update-plugins{display: none !important}
-        </style>';
+	echo '<style>.update-nag, .update-plugins{display: none !important}</style>';
 }
 add_action('admin_head', 'AV_hide_update_notification_func');
 
