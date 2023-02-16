@@ -63,6 +63,8 @@ function AV_remove_enfold_image_sizes_func(){
 	remove_image_size('shop_catalog');
 	remove_image_size('shop_single'); 
 	remove_image_size('shop_gallery_thumbnail');
+	remove_image_size('1536x1536');
+  	remove_image_size('2048x2048');
 }
 add_action('init', 'AV_remove_enfold_image_sizes_func');
 
