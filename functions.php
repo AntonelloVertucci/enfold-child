@@ -45,7 +45,12 @@ return $post_states;
 }
 add_filter('display_post_states','AV_remove_ALB_post_state_func', 999, 2);
 
-/* Remove Enfold image thumbnail sizes */
+
+/*
+    =============================================
+    Remove not necessary thumbnail sizes
+    =============================================
+*/
 function AV_remove_enfold_image_sizes_func(){
 	//remove_image_size('widget');
 	remove_image_size('square');
@@ -63,10 +68,14 @@ function AV_remove_enfold_image_sizes_func(){
 	remove_image_size('shop_catalog');
 	remove_image_size('shop_single'); 
 	remove_image_size('shop_gallery_thumbnail');
-	remove_image_size('1536x1536');
-  	remove_image_size('2048x2048');
+    remove_image_size('1536x1536');
+    remove_image_size('2048x2048');
 }
 add_action('init', 'AV_remove_enfold_image_sizes_func');
+
+add_filter('intermediate_image_sizes', function($sizes) {
+    return array_diff($sizes, ['medium_large']);
+});
 
 
 /*
