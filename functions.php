@@ -48,33 +48,40 @@ add_filter('display_post_states','AV_remove_ALB_post_state_func', 999, 2);
 
 /*
     =============================================
-    Remove not necessary thumbnail sizes
+    Prevent Wordpress from generating not necessary thumbnails
     =============================================
 */
 function AV_remove_enfold_image_sizes_func(){
-	//remove_image_size('widget');
-	remove_image_size('square');
-	remove_image_size('featured');
-	remove_image_size('featured_large');
-	remove_image_size('extra_large');
-	remove_image_size('portfolio');
-	remove_image_size('portfolio_small');
-	remove_image_size('gallery');
-	remove_image_size('magazine');
-	remove_image_size('masonry');
-	remove_image_size('entry_without_sidebar');
-	remove_image_size('entry_with_sidebar');
-	remove_image_size('shop_thumbnail');
-	remove_image_size('shop_catalog');
-	remove_image_size('shop_single'); 
-	remove_image_size('shop_gallery_thumbnail');
-    remove_image_size('1536x1536');
-    remove_image_size('2048x2048');
+    //remove_image_size('widget');
+    remove_image_size('square');
+    remove_image_size('featured');
+    remove_image_size('featured_large');
+    remove_image_size('extra_large');
+    remove_image_size('portfolio');
+    remove_image_size('portfolio_small');
+    remove_image_size('gallery');
+    remove_image_size('magazine');
+    remove_image_size('masonry');
+    remove_image_size('entry_without_sidebar');
+    remove_image_size('entry_with_sidebar');
 }
 add_action('init', 'AV_remove_enfold_image_sizes_func');
 
 add_filter('intermediate_image_sizes', function($sizes) {
-    return array_diff($sizes, ['medium_large']);
+    return array_diff($sizes, [
+        //'thumbnail',
+        //'medium',
+        'medium_large',
+        //'large',
+        '1536x1536',
+        '2048x2048',
+        //'woocommerce_thumbnail',
+        //'woocommerce_single',
+        //'woocommerce_gallery_thumbnail',
+        //'shop_thumbnail',
+        //'shop_catalog',
+        //'shop_single',
+    ]);
 });
 
 
