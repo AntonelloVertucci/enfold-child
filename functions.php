@@ -19,19 +19,19 @@ if(!function_exists('avia_debugging_info')){
 /* Remove the Import Dummy Data button (Demo) */
 add_theme_support('avia_disable_dummy_import');
 
-/* Disable Portfolio 
+/* Disable Portfolio */
 function AV_disable_portfolio_func(){
     remove_action('init', 'portfolio_register');
 }
 add_action('after_setup_theme', 'AV_disable_portfolio_func');
-*/
 
-/* Replace portfolio name */
+/* Replace portfolio name 
 function AV_change_portfolio_name_func($args){
     $args['labels']['name'] = 'Produkte';
     return $args;
 }
 add_filter('avf_portfolio_cpt_args', 'AV_change_portfolio_name_func');
+*/
 
 /* Hide editor info / Post state */
 function AV_remove_ALB_post_state_func( $post_states, $post ){
@@ -116,6 +116,21 @@ add_action('admin_head', 'AV_hide_update_notification_func');
 
 /*
     =============================================
+    Add Post Type & Post Name to Body Class
+    =============================================
+*/
+function AV_add_postname_class_func($classes) {
+    global $post;
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+    return $classes;
+}
+add_filter('body_class', 'AV_add_postname_class_func');
+
+
+/*
+    =============================================
     Login Logo
     =============================================
 */
@@ -177,6 +192,5 @@ add_action('wp_enqueue_scripts', 'AV_enqueue_scripts_func');
     =============================================
     Remove <p> and <br/> from Contact Form 7
     =============================================
-
-add_filter('wpcf7_autop_or_not', '__return_false');
 */
+add_filter('wpcf7_autop_or_not', '__return_false');
