@@ -194,3 +194,16 @@ add_action('wp_enqueue_scripts', 'AV_enqueue_scripts_func');
     =============================================
 */
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+/*
+    =============================================
+    Restrict WordPress REST API
+    =============================================
+*/
+function AV_restrict_rest_api_func(){
+    if ( ! is_user_logged_in() ){
+        return new WP_Error( 'rest_api_unauthorized', 'Nur angemeldete Benutzer haben Zugriff auf die REST-API.', array( 'status' => 401 ) );
+    }
+}
+add_filter( 'rest_authentication_errors', 'AV_restrict_rest_api_func' );
