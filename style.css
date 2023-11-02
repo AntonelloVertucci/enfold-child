@@ -169,67 +169,6 @@ Misc
 
 
 /* =======================================================================================================================================
-Contact Form
-======================================================================================================================================= */
-/* Form Style */
-#top form{
-    --form-color: #000; 
-    --form-border-color: #d4d4d4; 
-    --form-font-family: 'Arial';
-}
-#top .alternate_color form{
-    --form-color: #fff; 
-    --form-border-color: #fff; 
-}
-
-#top form input,
-#top form select,
-#top form textarea{
-    padding: 1em !important; 
-    border-radius: .25em !important; 
-    border: 1px solid var(--form-border-color) !important; 
-    color: var(--form-color) !important; 
-    font-size: 1rem !important; 
-    margin-bottom: 1rem !important; 
-    background-color: transparent !important;
-    font-family: var(--form-font-family) !important;
-}
-#top form input,
-#top form select,
-#top form textarea{color: #fff}
-#top form label{font-size: var(--step--1); font-weight: 700; margin: 0 0 .25em .75em}
-
-/* Form Grid */
-#top form{--f-row-gap: 1rem;}
-#top form .f_row{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-bottom: var(--f-row-gap); gap: var(--f-row-gap)}
-#top form .f_row > div{-ms-flex-preferred-size: 220px;flex-basis: 220px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; max-width: 100%;}
-#top form .f_row > div.one-third{-webkit-box-flex: 0;-ms-flex: 0 0 calc( 33.333333% - (var(--f-row-gap) / 3 * 2) );flex: 0 0 calc( 33.333333% - (var(--f-row-gap) / 3 * 2) ); max-width: calc( 33.333333% - (var(--f-row-gap) / 3 * 2) );}
-#top form .f_row > div input, 
-#top form .f_row > div select, 
-#top form .f_row > div textarea{margin: 0 !important}
-
-/* CF7 */
-#top form.wpcf7-form .wpcf7-acceptance{display: block; margin-bottom: 1rem}
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item,
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label{margin: 0;}
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label > input{position: absolute; opacity: 0}
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label > span{padding: 0 0 0 2em; font-size: var(--step--1); line-height: 1.5; display: block; cursor: pointer; position: relative;}
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label > span:before{content: ''; width: 1em; height: 1em; display: inline-block; position: absolute; top: .1em; left: 0; border: 1px solid; border-radius: .25em}
-#top form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label > input:checked ~ span:before{background: var(--form-border-color); -webkit-box-shadow: inset 0 0 0 2px #fff; box-shadow: inset 0 0 0 2px #fff;}
-#top .alternate_color form.wpcf7-form .wpcf7-acceptance .wpcf7-list-item label > span{color: #fff}
-
-#top form.wpcf7-form input.wpcf7-submit{color: #fff !important; background-color: #000 !important; font-weight: 700; border-radius: .5em; padding: 1em 2em !important}
-#top form.wpcf7-form input.wpcf7-submit:disabled{opacity: .3}
-
-#top form.wpcf7-form .ajax-loader{display: none;}
-#top form.wpcf7-form .wpcf7-not-valid-tip{display: none;}
-#top form.wpcf7-form .wpcf7-response-output{font-size: 1rem; padding: 1em 2em; border-radius: .25em; margin: 0; border: 0; line-height: 1.5; background: #eee;}
-#top form.wpcf7-form .wpcf7-not-valid{border-color: red !important;}
-#top form.wpcf7-form.invalid .wpcf7-response-output{background: #fff0f0; border-color: red; color: red}
-#top form.wpcf7-form.sent .wpcf7-response-output{background: #daffda; border-color: green; color: green;}
-
-
-/* =======================================================================================================================================
 Blog: Single Post
 ======================================================================================================================================= */
 #top .template-single-blog article.post-entry .big-preview{max-width: 720px; margin: auto;}
@@ -251,7 +190,4 @@ Footer
 #scroll-top-link.avia_pop_class{opacity: 1}
 #scroll-top-link:hover{background: #f2f2f2}
 #scroll-top-link:before{content: '\e87e'}
-
-
-
 
