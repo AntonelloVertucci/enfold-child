@@ -105,17 +105,6 @@ add_filter('admin_footer_text', 'AV_footer_admin_left_func');
 
 /*
     =============================================
-    Hide Updates notification in WP Backend
-    =============================================
-*/
-function AV_hide_update_notification_func(){
-	echo '<style>.update-nag, .update-plugins{display: none !important}</style>';
-}
-add_action('admin_head', 'AV_hide_update_notification_func');
-
-
-/*
-    =============================================
     Add Post Type & Post Name to Body Class
     =============================================
 */
