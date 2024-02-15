@@ -5,12 +5,6 @@
     ENFOLD
     =============================================
 */
-/* Debug modus */
-function AV_enfold_debug_modus_func(){
-  return "debug";
-}
-add_action('avia_builder_mode', "AV_enfold_debug_modus_func");
-
 /* Remove Avia Framework debug information */
 if(!function_exists('avia_debugging_info')){
   	function avia_debugging_info(){}
