@@ -1,16 +1,12 @@
 /*
  Theme Name:   Enfold Child Theme
  Theme URI:    https://www.neckarmedia.com
- Description:  
+ Description:  WordPress Child Theme
  Author:       Neckarmedia
  Author URI:   https://www.neckarmedia.com
  Template:     enfold
  Version:      1.0
 */
-
-:root {
-    --link-color: #0054f5;
-}
 
 /* @link https://utopia.fyi/type/calculator?c=375,16,1.2,1240,18,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
@@ -40,19 +36,20 @@ h1,h2,h3,h4,h5,h6{font-family: 'Arial', sans-serif; font-weight: 700; line-heigh
 
 #top h1{font-size: var(--step-4);}
 #top h2{font-size: var(--step-3);}
-#top h3{font-size: var(--step-1);}
-#top h4{font-size: var(--step-0);}
+#top h3{font-size: var(--step-2);}
+#top h4{font-size: var(--step-1);}
 
 #top .special_amp{color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;}
 #top .av-special-heading{padding: 0 !important}
 #top .av-special-heading .special-heading-border{display: none;}
 #top .av-special-heading.avia-builder-el-no-sibling .av-special-heading-tag{margin: 0 !important}
 
-#top .main_color a{color: var(--link-color);}
-#top .alternate_color a,
-#top .main_color a:hover{text-decoration: underline;}
-#top .main_color b,
-#top .main_color strong{color: #000}
+#top .avia-section b,
+#top .avia-section strong,
+#top .footer_color b,
+#top .footer_color strong,
+#top .socket_color b,
+#top .socket_color strong{color: inherit}
 
 /* Button */
 #top div .avia-button{
@@ -77,6 +74,24 @@ html.no-touch-device #top div .avia-button:hover{translate: 0 -2px}
 #top blockquote{border: 0; font-size: var(--step-1); margin: 2em 0 2em; padding: 0 0 0 2em; position: relative; max-width: 420px; font-style: italic; line-height: 1.6}
 #top blockquote:before{content: '\e833'; font-family: 'entypo-fontello'; position: absolute; top: -.3em; left: 0; opacity: .1; font-size: 4em; font-style: normal; line-height: 1}
 #top blockquote p{font-size: 1em; margin: 0}
+
+/* List */
+#top .entry-content-wrapper ul{
+    list-style: none;
+    margin: 0 0 1em 0;
+}
+#top .entry-content-wrapper ul > li{
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0 1em;
+    position: relative;
+}
+#top .entry-content-wrapper ul > li:before{
+    content: '\e875';
+    font-family: 'entypo-fontello';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+}
 
 
 /* =======================================================================================================================================
@@ -118,8 +133,6 @@ Header
 
 /* Navigation */
 @media only screen and (min-width: 990px){
-    #header_main .inner-container > nav ul#avia-menu{}
-    #header_main .inner-container > nav ul#avia-menu > li{}
     #header_main .inner-container > nav ul#avia-menu > li > a{font-size: var(--step--1); font-weight: 400}
     #header_main .inner-container > nav ul#avia-menu > li li > a{font-size: var(--step--1); font-weight: 400}
     #header_main .inner-container > nav ul#avia-menu li:hover > a > .avia-menu-text,
@@ -156,16 +169,19 @@ Misc
 #top .avia-image-container-inner{border-radius: 0}
 
 /* Toggle */
-#top section.av_toggle_section .toggler{padding: .8em 3.2em .8em 1.2em; margin: 0 0 .8em; font-size: var(--step-0); background: transparent; border: 1px solid #ebebeb; border-radius: .5em}
+#top section.av_toggle_section .toggler{padding: 1em 3em 1em 1rem; margin: 0 0 .8em; font-size: var(--step-0); background: transparent; border: 1px solid #ebebeb; border-radius: .5em}
 #top section.av_toggle_section .toggler:hover{background: transparent;}
 #top section.av_toggle_section .toggler .toggle_icon{display: none;}
-#top section.av_toggle_section .toggler:after{content: '\e87d'; font-family: 'entypo-fontello'; position: absolute; right: 1.2em; top: .8em; scale: 1.2; -webkit-transition: .2s ease; -o-transition: .2s ease; transition: .2s ease}
+#top section.av_toggle_section .toggler:after{
+	content: '\e87d';
+    font-family: 'entypo-fontello';
+    position: absolute;
+    right: 1em;
+    transition: .2s ease;
+}
 #top section.av_toggle_section .toggler.activeTitle:after{rotate: 90deg}
-#top section.av_toggle_section .toggle_content{border: 0; background: transparent; padding: .5em calc(1.2 * var(--step-0)) 1.5em;}
+#top section.av_toggle_section .toggle_content{border: 0; background: transparent; padding: .5em 1rem 1.5em;}
 #top section.av_toggle_section .toggle_content *{font-size: var(--step--1);}
-
-/* Impressum Page */
-#top.page-impressum .avia_textblock p{font-size: var(--step--1); text-align: justify;}
 
 
 /* =======================================================================================================================================
@@ -184,10 +200,8 @@ Footer
 
 #socket{font-size: var(--step--1);}
 #socket .container{padding-top: 1.5rem; padding-bottom: 3rem;}
-#socket .container a{color: var(--link-color);}
 
 #scroll-top-link{height: 56px; width: 48px; line-height: 56px; border-radius: 0; border: 0 !important; background: #f2f2f2}
 #scroll-top-link.avia_pop_class{opacity: 1}
 #scroll-top-link:hover{background: #f2f2f2}
 #scroll-top-link:before{content: '\e87e'}
-
