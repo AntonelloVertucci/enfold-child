@@ -76,16 +76,16 @@ html.no-touch-device #top div .avia-button:hover{translate: 0 -2px}
 #top blockquote p{font-size: 1em; margin: 0}
 
 /* List */
-#top .entry-content-wrapper ul{
+#top .avia_textblock ul{
     list-style: none;
     margin: 0 0 1em 0;
 }
-#top .entry-content-wrapper ul > li{
+#top .avia_textblock ul > li{
     margin: 0 0 0.5em 0;
     padding: 0 0 0 1em;
     position: relative;
 }
-#top .entry-content-wrapper ul > li:before{
+#top .avia_textblock ul > li:before{
     content: '\e875';
     font-family: 'entypo-fontello';
     position: absolute;
@@ -199,7 +199,7 @@ Footer
 #footer{padding: 2rem 0}
 
 #socket{font-size: var(--step--1);}
-#socket .container{padding-top: 1.5rem; padding-bottom: 3rem;}
+#socket .container{padding-top: 1rem; padding-bottom: 1rem;}
 
 #scroll-top-link{height: 56px; width: 48px; line-height: 56px; border-radius: 0; border: 0 !important; background: #f2f2f2}
 #scroll-top-link.avia_pop_class{opacity: 1}
